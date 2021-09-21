@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type ="text" id = "input"></label>
+<br>
+<button onclick="searchEng()">Search</button>
+<h1 id ="result"></h1>
+<script>
+    let arrEng = ["hello", "goodbye", "cat", "dog"]
+    let arrViet = ["xin chao", "tam biet", "meo", "cho"]
+    function searchEng() {
+        let input = document.getElementById("input").value;
+        let check = false
+        for (let i = 0; i < arrEng.length; i++) {
+            if (input === arrEng[i]) {
+                document.getElementById("result").innerHTML = arrViet[i]
+                check = true
+                break
+            }
+        }
+        if (check === false) {
+            document.getElementById("result").innerHTML = "ko tim thay"
+
+        }
+
+    }
+</script>
+</body>
+</html>
